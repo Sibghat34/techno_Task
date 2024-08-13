@@ -268,7 +268,7 @@ body {
   }
 
   .hero-container2-main-h1 {
-    font-size: 20px;
+    font-size: 21px;
   }
   .hero-container2-main-p {
     font-size: 14px;
@@ -401,6 +401,7 @@ body {
 .why-choose-us-sub2-point {
   display: flex;
   justify-content: center;
+  column-gap: 10px;
 }
 
 /* Why Choose Us Responsiveness */
@@ -429,6 +430,10 @@ body {
     top: 10px;
   }
 
+  .why-choose-us-sub2-point h3 {
+    font-size: 18px;
+  }
+
   .why-choose-us-sub2 {
     width: 100%;
     padding: 30px 0px;
@@ -446,12 +451,11 @@ body {
   }
 
   .why-choose-us-sub2-point {
-    
     justify-content: start;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .why-choose-us-main {
     flex-direction: column;
     padding-top: 40px;
@@ -492,43 +496,6 @@ body {
     row-gap: 30px;
   }
 }
-
-/* @media (min-width: 1024px) {
-  .why-choose-us-main {
-    padding-top: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 90px;
-  }
-
-  .why-choose-us-sub2 {
-    padding: 30px 0px;
-  }
-  .why-choose-us-sub2 h1 {
-    font-size: 30px;
-    font-weight: 600;
-  }
-  .why-choose-us-sub1 div {
-    width: 320px;
-    height: 320px;
-  }
-
-  .why-choose-us-sub1 div img {
-    width: 320px;
-    height: 320px;
-    right: -20px;
-    top: 10px;
-  }
-
-  .why-choose-us-sub2-point-main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 30px;
-  }
-} */
-
-
 
 /* Services*/
 .services {
@@ -621,6 +588,44 @@ body {
   color: #ccc;
 }
 
+/* Services Responsiveness */
+
+@media (max-width: 768px) {
+  .services-main {
+    row-gap: 50px;
+    padding: 30px 20px;
+  }
+
+  .services-main h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .service-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+
+  .services-main a h2 {
+    font-size: 18px;
+  }
+
+  .services-main button {
+    padding: 15px 25px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1100px) {
+  .service-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 50px;
+  }
+}
+
 /* Projects */
 
 .projects {
@@ -666,6 +671,7 @@ body {
 }
 
 .project-tab img {
+  aspect-ratio: 3/2;
   width: 100%;
 }
 
@@ -687,6 +693,31 @@ body {
 .projects-main a button:hover {
   transform: scale(0.95);
 }
+
+/* Projects Responsiveness */
+
+@media (max-width: 768px) {
+    .projects-main {
+        row-gap: 20px;
+        padding: 30px 20px;
+      }
+    #project-tabs {
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+    #project-tabs li a{
+        font-size: 12px;
+    }
+
+    .projects-main a button {
+        padding: 10px 25px;
+        font-size: 12px;
+      }
+}
+
+
 
 /* Problem */
 .problem {
@@ -730,6 +761,7 @@ body {
 .problem-sub1 h1 {
   font-size: 40px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .problem-sub1 a {
   display: flex;
@@ -750,9 +782,37 @@ body {
 }
 
 .problem-sub2 img {
-  height: 500px;
-  width: 650px;
+  height: 600px;
+  width: 90%;
   padding-top: 50px;
+}
+
+/* Problem Responsiveness*/
+@media (max-width: 768px) {
+  .problem-main {
+    flex-direction: column-reverse;
+    padding-bottom: 20px;
+  }
+  .problem-sub1 {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .problem-sub1 h1 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .problem-sub2 {
+    width: 100%;
+    padding: 0px 20px;
+  }
+
+  .problem-sub2 img {
+    height: 500px;
+    width: 80%;
+    padding-top: 50px;
+  }
 }
 
 /* Conatct */
@@ -775,13 +835,20 @@ body {
   flex-direction: column;
   justify-content: center;
   row-gap: 60px;
+  width: 40%;
+}
+
+.contact-sub1-map {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
 }
 
 .contact-sub2 {
   display: flex;
   flex-direction: column;
   row-gap: 60px;
-  width: 100%;
+  width: 60%;
 }
 
 .contact-sub2-form {
@@ -827,6 +894,31 @@ body {
   transform: scale(0.95);
 }
 
+@media (max-width: 900px) {
+  .contact-main {
+    flex-direction: column;
+    row-gap: 20px;
+    padding: 30px 20px;
+  }
+
+  .contact-sub2-form-section1 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .contact-sub2-form a button {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+  .contact-sub1 {
+    width: 100%;
+  }
+  .contact-sub2 {
+    width: 100%;
+  }
+  
+}
+
 /* Badge sectiom */
 .badge {
   display: flex;
@@ -837,12 +929,25 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 30px 0px;
   width: 100%;
   max-width: 1600px;
 }
 
 .badge-main img {
-  height: 300px;
+  height: 200px;
+}
+
+@media (max-width: 640px) {
+  .badge-main img {
+    height: 70px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1440px) {
+  .badge-main img {
+    height: 150px;
+  }
 }
 
 /* Footer */
@@ -958,6 +1063,60 @@ body {
   justify-content: center;
 }
 
+/* Footer Responsiveness */
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .footer-sub1 h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .footer-sub1 p {
+    font-size: 14px;
+  }
+
+  .footer-sub2 h2 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .footer-sub2 p {
+    font-size: 14px;
+  }
+
+  .footer-sub3 {
+    padding: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .footer-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: start;
+    gap: 0px;
+    padding: 30px 20px;
+  }
+  .footer-sub1:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / 3;
+  }
+  .footer-sub2:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / 3;
+  }
+  .footer-sub3:nth-child(3) {
+    grid-column: 1 / span 2;
+    grid-row: 2 / 3;
+  }
+}
+
 /* Post Footer */
 
 .post-footer {
@@ -967,4 +1126,10 @@ body {
   color: white;
   width: 100%;
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .post-footer p {
+    font-size: 14px;
+  }
 }
